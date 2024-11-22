@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAS GROUP2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <style>
+        html,
+        body {
+            min-width: 300px;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling if the content overflows */
+        }
+
+        /* Stories Section */
+        .stories-container {
+            display: flex;
+            overflow-x: auto;
+            /* Enable horizontal scrolling for small screens */
+            padding: 10px 0;
+        }
+
+        .story-item {
+            width: 80px;
+            /* Fixed width for each story */
+            flex-shrink: 0;
+            text-align: center;
+            margin-right: 10px;
+            /* Space between stories */
+        }
+
+        .story-image {
+            width: 80px;
+            /* Fixed width */
+            height: 80px;
+            /* Fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio, filling the container */
+            border-radius: 50%;
+            /* Make the image circular */
+            border: 3px solid blue;
+            /* Add a blue border */
+        }
+
+        .story-text {
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        /* Ensure story images remain the same size on smaller screens */
+        @media (max-width: 767px) {
+            .story-item {
+                width: 80px;
+                /* Maintain size on small screens */
+            }
+
+            .story-image {
+                width: 80px;
+                /* Fixed width */
+                height: 80px;
+                /* Fixed height */
+            }
+        }
+
+
+        /* Styling for the buttons under the "What's on your mind" section */
+        .action-buttons {
+            margin-top: 15px;
+        }
+
+        .action-buttons .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Add padding to the button container */
+        .action-buttons .btn i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 1400px) {
+
+            /* Only display the icons, hide the text */
+            .action-buttons .btn i {
+                margin-right: 0;
+                /* Remove spacing between the icon and text */
+            }
+
+            .action-buttons .btn span {
+                display: none;
+                /* Hide the text span when screen width is 1400px or smaller */
+            }
+        }
+
+
+        @media (max-width: 991px) {
+            .card-body .niel {
+                max-width: 100%;
+                /* Ensures the image stays within the container */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        }
+
+        .rounded-circle-circle {
+            width: 60px;
+            /* Smaller size */
+            height: 60px;
+            /* Smaller size */
+            border-radius: 50%;
+            /* Keeps the circle shape */
+            object-fit: cover;
+            /* Ensures the image fills the circle while maintaining aspect ratio */
+        }
+
+        .small-icon {
+            font-size: 12px;
+            /* Adjust to desired size */
+            vertical-align: middle;
+            /* Align icon with text */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Group2</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notifications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 mb-4">
+                <!-- Profile Card for John Doe -->
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="images/oscar.jpg" alt="John Doe" class="rounded-circle mb-3 niel" width="150"
+                            height="150">
+                        <h5 class="card-title">Oscar Pacanal</h5>
+                        <p class="card-text text-muted">Chief Information Security Officer</p>
+                        <button class="btn btn-primary w-100 mb-3">Edit Profile</button>
+                        <div class="mt-3">
+                            <h6>Friends</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item">Jamal</li>
+                                <li class="list-group-item">Barkley</li>
+                                <li class="list-group-item">Arlan</li>
+                                <li class="list-group-item">Wiggy</li>
+                                <li class="list-group-item"><button class="btn btn-primary w-100 mb-3">See More</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feed -->
+            <div class="col-md-6">
+                <!-- Stories Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Stories</h5>
+                        <div class="stories-container">
+                            <!-- Story Items (5 Stories) -->
+                            <div class="story-item">
+                                <img src="images/oscar.jpg" class="story-image" alt="Story 1">
+                                <div class="story-text">Your Story</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/angela.jpg" class="story-image" alt="Story 1">
+                                <div class="story-text">Angela Vada</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/lord.jpg" class="story-image" alt="Story 2">
+                                <div class="story-text">Lord Anthony Enoc</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/charles.jpg" class="story-image" alt="Story 3">
+                                <div class="story-text">Charles T. Villena</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/israel.jpg" class="story-image" alt="Story 4">
+                                <div class="story-text">Israel Inting</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/paul.jpg" class="story-image" alt="Story 5">
+                                <div class="story-text">Janpaul Yongco</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/jayjay.jpg" class="story-image" alt="Story 6">
+                                <div class="story-text">Jayjay Taneo</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/jolo.jpg" class="story-image" alt="Story 7">
+                                <div class="story-text">Jolo Sahagun</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/joshua.jpg" class="story-image" alt="Story 8">
+                                <div class="story-text">Joshua Garcia Jr.</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/marj.jpg" class="story-image" alt="Story 9">
+                                <div class="story-text">Marjorie Casul</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/nino.jpg" class="story-image" alt="Story 10">
+                                <div class="story-text">Nino Encorporado</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/opalong.jpg" class="story-image" alt="Story 11">
+                                <div class="story-text">Jehoram Opalong</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/rs.jpg" class="story-image" alt="Story 12">
+                                <div class="story-text">Russel Mae Dulangon</div>
+                            </div>
+                            <div class="story-item">
+                                <img src="images/jov.jpg" class="story-image" alt="Story 13">
+                                <div class="story-text">Jovelyn Limpangog</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Post Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <textarea class="form-control mb-3" rows="3" placeholder="What's on your mind?"></textarea>
+
+                        <!-- Action Buttons: Live Video, Photo/Video, Feeling/Activity -->
+                        <div class="row action-buttons">
+                            <div class="col-4">
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-video"></i> <span>Live Video</span>
+                                </button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-outline-secondary w-100">
+                                    <i class="fas fa-camera"></i> <span>Photo/Video</span>
+                                </button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-outline-success w-100">
+                                    <i class="fas fa-smile"></i> <span>Feeling/Activity</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success w-100 mt-3">Post</button>
+                    </div>
+                </div>
+
+                <!-- Sample Post with Image -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/charles.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Charles T. Villena<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            Professional Organizations Governing Information Security Both in the Philippines and
+                            Internationally.
+                            Information security involves safeguarding sensitive data, systems, and networks against
+                            unauthorized access, cyber threats, and breaches. Globally and locally, various professional
+                            organizations govern this field by setting standards, providing certifications, and
+                            fostering best practices.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/intro.jpeg" class="img-fluid mb-3" alt="Post Image">
+
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section (Under the buttons) -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/marj.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Marjorie Casul</strong> <small>1hr ago</small>
+                                    <p class="mb-0">I completely agree! Information security is key to safeguarding data
+                                        and ensuring business continuity in today’s digital age.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/jolo.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Jolo Sahagun<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>Professional Organizations in the Philippines: National Privacy Commission (NPC)</b>
+                            <br><br>
+                            Role: The NPC is the primary authority enforcing the Data Privacy Act of 2012 (RA 10173).
+                            <br>Functions:
+                            Promotes compliance with privacy laws to protect personal data.
+                            Investigates and addresses data breaches.
+                            Enhances public awareness of data privacy rights.
+                            <br>Significance: NPC ensures organizations adopt robust information security measures to
+                            protect personal information, aligning with international frameworks.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/npc.jpg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section (Under the buttons) -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/rs.jpg" alt="User" class="rounded-circle me-2" width="30" height="30">
+                                <div>
+                                    <strong>Russel Mae Dulangon</strong> <small>1hr ago</small>
+                                    <p class="mb-0">I agree! The NPC plays a crucial role in ensuring data privacy and
+                                        security in the Philippines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/angela.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Angela Vada<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>Philippine Computer Emergency Response Team (PH-CERT)</b>
+                            <br><br>
+                            Role: A private initiative addressing cybersecurity threats and incidents in the
+                            Philippines.
+                            <br>Functions:
+                            Provides response services during cyber incidents.
+                            Disseminates information on vulnerabilities and threats.
+                            Works with public and private sectors to improve national cybersecurity resilience.
+                            <br>Significance: PH-CERT is pivotal in the country's cybersecurity incident management and
+                            threat response.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/phcert.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section (Under the buttons) -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/lord.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Lord Anothony Enoc</strong> <small>1hr ago</small>
+                                    <p class="mb-0">I believe PH-CERT plays a critical role in ensuring our nation's
+                                        cybersecurity defense against evolving threats.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/israel.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Israel Inting<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>Cybercrime Investigation and Coordinating Center (CICC)</b>
+                            <br><br>
+                            Role: A government agency under the Department of Information and Communications Technology
+                            (DICT) focused on combating cybercrime.
+                            <br>Functions:
+                            Develops policies to address cybercrimes.
+                            Provides training for law enforcement on digital forensics and investigation.
+                            Coordinates national and international efforts against cybercrime.
+                            <br>Significance: CICC strengthens the Philippines’ legal and technical response to
+                            cybercriminal activities.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/cicc.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section (Under the buttons) -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/charles.jpg" alt="User" class="rounded-circle me-2" width="30"
+                                    height="30">
+                                <div>
+                                    <strong>Charles T. Villena</strong> <small>1hr ago</small>
+                                    <p class="mb-0">The CICC's efforts are essential in combating the rise of
+                                        cybercrime. It's important to invest in digital forensics and training for law
+                                        enforcement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/jayjay.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">jayjay Taneo<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>ISACA Manila Chapter</b>
+                            <br><br>
+                            Role: The Philippine branch of the global ISACA organization.
+                            <br>Functions:
+                            Provides internationally recognized certifications like CISM (Certified Information Security
+                            Manager) and CISA (Certified Information Systems Auditor).
+                            Offers workshops and training on IT governance and cybersecurity.
+                            <br>Significance: ISACA Manila ensures Filipino professionals are equipped with global best
+                            practices and credentials in information security.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/isaca.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section (Under the buttons) -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/opalong.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Jehoram Opalong</strong> <small>1hr ago</small>
+                                    <p class="mb-0">I agree, ISACA Manila plays a crucial role in strengthening the
+                                        knowledge and skills of Filipino professionals in IT security.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/joshua.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Joshua Garcia Jr.<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>(ISC)² Philippines Chapter</b>
+                            <br><br>
+                            Role: The local chapter of the International Information System Security Certification
+                            Consortium ((ISC)²).
+                            <br>Functions:
+                            Offers certifications like CISSP (Certified Information Systems Security Professional) to
+                            validate expertise in cybersecurity.
+                            Advocates for ethical practices and continuous professional development in the field.
+                            <br>Significance: (ISC)² Philippines supports professionals in achieving internationally
+                            recognized standards in cybersecurity.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/isc2.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section (Under the buttons) -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/paul.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Janpaul Yongco</strong> <small>1hr ago</small>
+                                    <p class="mb-0">The CISSP certification is highly valuable for cybersecurity
+                                        professionals. It's great to see (ISC)² Philippines pushing the standards in the
+                                        industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/marj.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Marjorie Casul<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>International Organization Governing Information Security</b>
+                            <br><br>
+                            ISACA (Information Systems Audit and Control Association)
+                            <br><br>
+                            Role: A global nonprofit organization specializing in IT governance, risk management, and
+                            cybersecurity.
+                            <br>Functions:
+                            Provides certifications such as:
+                            CISM (Certified Information Security Manager): Focused on managing information security
+                            programs.
+                            CISA (Certified Information Systems Auditor): Emphasizing IT audits and controls.
+                            CRISC (Certified in Risk and Information Systems Control): Highlighting risk management and
+                            mitigation.
+                            Publishes frameworks like COBIT for IT governance.
+                            <br>Significance: ISACA equips professionals with skills to implement, manage, and audit
+                            robust information security systems.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/isaca1.jpg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/joshua.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Joshua Garcia Jr.</strong> <small>1hr ago</small>
+                                    <p class="mb-0">This is a great initiative! ISACA's certifications are valuable for
+                                        cybersecurity professionals and play a key role in the industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/nino.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Niño Encorporado<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>International Organization Governing Information Security</b>
+                            <br><br>
+                            <b>(ISC)² (International Information System Security Certification Consortium)</b>
+                            <br><br>
+                            Role: A leading global organization for cybersecurity certifications.
+                            <br>Functions:
+                            Offers certifications such as:
+                            CISSP (Certified Information Systems Security Professional): Recognized for its technical
+                            and managerial focus on securing enterprise systems.
+                            CCSP (Certified Cloud Security Professional): Specializing in cloud security practices.
+                            Promotes ethical practices and continuous learning in information security.
+                            <br>Significance: (ISC)² is widely recognized for setting global standards in cybersecurity
+                            expertise and ethics.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/isc21.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/jov.jpg" alt="User" class="rounded-circle me-2" width="50" height="30">
+                                <div>
+                                    <strong>Jovelyn Limpangog</strong> <small>1hr ago</small>
+                                    <p class="mb-0">CISSP is a must-have certification for anyone serious about securing
+                                        information systems. Great to see (ISC)² providing these resources!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/opalong.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Jehoram Opalong<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>International Organization Governing Information Security</b>
+                            <br><br>
+                            <b>SANS Institute</b>
+                            <br><br>
+                            Role: A global leader in cybersecurity training and certifications.
+                            <br>Functions:
+                            Offers practical certifications like GIAC (Global Information Assurance Certification) in
+                            penetration testing, incident response, and other specialized areas.
+                            Conducts in-depth training programs for cybersecurity professionals.
+                            <br>Significance: SANS provides hands-on expertise to address evolving cybersecurity
+                            challenges effectively.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/sans.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/angela.jpg" alt="User" class="rounded-circle me-2" width="30"
+                                    height="30">
+                                <div>
+                                    <strong>Angela Vada</strong> <small>1hr ago</small>
+                                    <p class="mb-0">SANS Institute offers some of the best practical cybersecurity
+                                        training programs, perfect for tackling current threats in the industry!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/rs.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Russel Mae Dulangon<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>International Organization Governing Information Security</b>
+                            <br><br>
+                            <b>ISO/IEC (International Organization for Standardization / International Electrotechnical
+                                Commission)</b>
+                            <br><br>
+                            Role: Develops international standards for information security.
+                            <br>Functions:
+                            Publishes standards such as ISO/IEC 27001, which outlines requirements for establishing an
+                            Information Security Management System (ISMS).
+                            Promotes best practices for securing information assets.
+                            <br>Significance: ISO/IEC standards are globally recognized benchmarks for securing data and
+                            systems.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/iso.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/jolo.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Jolo Sahagun</strong> <small>1hr ago</small>
+                                    <p class="mb-0">ISO/IEC standards have set the gold standard for securing sensitive
+                                        data and ensuring effective security management worldwide!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/jov.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Jovelyn Limpangog<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>International Organization Governing Information Security</b>
+                            <br><br>
+                            <b>NIST (National Institute of Standards and Technology)</b>
+                            <br><br>
+                            Role: A U.S. government agency that provides cybersecurity guidelines and frameworks.
+                            <br>Functions:
+                            Publishes the NIST Cybersecurity Framework, widely adopted for managing and reducing
+                            cybersecurity risks.
+                            Provides tools and resources for organizations to enhance their cybersecurity posture.
+                            <br>Significance: NIST serves as a foundational reference for information security
+                            strategies worldwide.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/nist.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/paul.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Janpaul Yongco</strong> <small>1hr ago</small>
+                                    <p class="mb-0">NIST has been a crucial reference for aligning cybersecurity
+                                        practices and ensuring standards for organizations to follow.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/paul.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Janpaul Yongco<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>International Organization Governing Information Security</b>
+                            <br><br>
+                            <b>ENISA (European Union Agency for Cybersecurity)</b>
+                            <br><br>
+                            Role: Strengthens cybersecurity across the European Union.
+                            <br>Functions:
+                            Develops policies and guidelines to manage cybersecurity risks.
+                            Coordinates with member states and industry stakeholders to enhance resilience.
+                            <br>Significance: ENISA drives the development of cybersecurity policies and fosters
+                            collaboration in Europe.
+                            <br>Certifications Example: CISSP, CISM
+                            <br>Certifications play a vital role in validating professional expertise in information
+                            security.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/enisa.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/opalong.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Jehoram Opalong</strong> <small>1hr ago</small>
+                                    <p class="mb-0">ENISA is essential in maintaining the cybersecurity resilience of
+                                        the EU and promoting cross-border cooperation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/lord.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Lord Anthony Enoc<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>CISSP (Certified Information Systems Security Professional)</b>
+                            <br><br>
+                            Offered by: (ISC)²
+                            <br>Focus: Broad technical and managerial knowledge in security architecture, risk
+                            management, and operations.
+                            <br>Target Audience: Security Analysts, Engineers, and Architects.
+                            <br>Recognition: The gold standard for cybersecurity professionals globally.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/cissp.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/charles.jpg" alt="User" class="rounded-circle me-2" width="30"
+                                    height="30">
+                                <div>
+                                    <strong>Charles T. Villena</strong> <small>1hr ago</small>
+                                    <p class="mb-0">CISSP is a comprehensive certification that strengthens a
+                                        professional's skills and marketability in cybersecurity!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/marj.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Marjorie Casul<br>1hr<i class="fa-solid fa-user-group small-icon"></i></h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>CISM (Certified Information Security Manager)</b>
+                            <br><br>
+                            Offered by: ISACA
+                            <br>Focus: Management and governance of information security programs.
+                            <br>Target Audience: Security Managers, CISOs, and IT Governance Leaders.
+                            <br>Recognition: A prestigious certification for managerial roles in cybersecurity.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/cism.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/charles.jpg" alt="User" class="rounded-circle me-2" width="30"
+                                    height="30">
+                                <div>
+                                    <strong>Charles T. Villena</strong> <small>1hr ago</small>
+                                    <p class="mb-0">The CISM certification is highly valuable for anyone looking to lead
+                                        security teams and shape cybersecurity strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- User Info -->
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="images/rs.jpg" alt="User" class="rounded-circle-circle me-2" width="40"
+                                height="40">
+                            <h6 class="mb-0">Russel Mae Dulangon<br>1hr<i class="fa-solid fa-user-group small-icon"></i>
+                            </h6>
+                        </div>
+
+                        <!-- Post Content -->
+                        <p class="card-text">
+                            <b>Conclusion</b>
+                            <br><br>
+                            In the Philippines, organizations like the National Privacy Commission, PH-CERT, CICC, and
+                            local chapters of ISACA and (ISC)² govern information security by enforcing laws and
+                            offering certifications. Internationally, bodies like ISACA, (ISC)², SANS Institute,
+                            ISO/IEC, and NIST set global standards and provide certifications like CISSP and CISM to
+                            ensure professionals meet the highest level of expertise. These organizations collectively
+                            enhance information security, fostering a safer digital environment globally and locally.
+                        </p>
+
+                        <!-- Post Image -->
+                        <img src="images/intro.jpeg" class="img-fluid mb-3" alt="Post Image">
+                        <!-- Like, Comment, Share Counts Above Buttons -->
+                        <div class="mb-2">
+                            <span><strong>1M Likes</strong></span> ·
+                            <span><strong>3.2K Comments</strong></span>
+                        </div>
+
+                        <!-- Like, Comment, Share Buttons -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fa-regular fa-thumbs-up"></i> Like
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fa-regular fa-comment"></i> Comment
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-share"></i> Share
+                            </button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="mb-3">
+                            <div class="d-flex mb-2">
+                                <img src="images/opalong.jpg" alt="User" class="rounded-circle me-2" width="50"
+                                    height="30">
+                                <div>
+                                    <strong>Jehoram Opalong</strong> <small>1hr ago</small>
+                                    <p class="mb-0">A comprehensive overview of the role of information security
+                                        organizations in both local and global contexts. Well done!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-md-3 d-none d-md-block">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">People You May Know</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Keith Raganas</li>
+                            <li class="list-group-item">Ronan Urot</li>
+                            <li class="list-group-item">Aubrey Ornopia</li>
+                            <li class="list-group-item">Niel Parsly Kaji Echivarre</li>
+                            <li class="list-group-item">Leester Cruspero</li>
+                            <li class="list-group-item">John Lloyd Siarot</li>
+                            <li class="list-group-item">Clifford Casquejo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
